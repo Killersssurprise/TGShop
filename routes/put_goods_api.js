@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var tokenstore = require('../misc/tokenstore.js')
 
 var http = require('http');
 const jsonParser = express.json();
@@ -9,9 +10,7 @@ var price = "price";
 var count = "0";
 var description = "nothing";
 const TelegramBot = require('node-telegram-bot-api');
-const token = '';
-const bot = new TelegramBot(token, {polling: true});
-const chatId = '';
+const bot = new TelegramBot(tokenstore.GetBotToken(), {polling: true});
 
 router.all("/", jsonParser, function (req, res) {
 
@@ -68,32 +67,9 @@ router.all("/", jsonParser, function (req, res) {
         //const resp = match[1]; // the captured "whatever"
 
         let ads = `В продажу поступил новый товар! В продаже ${mName} по отличной цене всего ${mPrice} рублей в количестве ${mCount} единиц. ${mDescription}`;
-        bot.sendMessage(chatId, ads);
+        bot.sendMessage(tokenstore.GetChatId(), ads);
 
         res.send(answer);
-
-        // var answ = '';
-        //
-        // switch (device_type) {
-        //     case null:
-        //         kordon_driver.getFullCamInfoData(login, password, ip, port, timestampStart, timestampEnd, res);
-        //         break;
-        //     case 'undefined':
-        //         kordon_driver.getFullCamInfoData(login, password, ip, port, timestampStart, timestampEnd, res);
-        //         break;
-        //     case kordonID:
-        //         kordon_driver.getFullCamInfoData(login, password, ip, port, timestampStart, timestampEnd, res);
-        //         break;
-        //     case vocordID:
-        //         vocord_driver.getFullCamInfoData(login, password, ip, port, timestampStart, timestampEnd, res);
-        //         break;
-        //     case orlanID:
-        //         orlan_driver.getFullCamInfoData(login, password, ip, port, timestampStart, timestampEnd, res);
-        //         break;
-        //     default:
-        //         kordon_driver.getFullCamInfoData(login, password, ip, port, timestampStart, timestampEnd, res);
-        //         break;
-        // }
 
     } catch (e) {
 
