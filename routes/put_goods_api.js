@@ -8,7 +8,10 @@ var name = "name";
 var price = "price";
 var count = "0";
 var description = "nothing";
-
+const TelegramBot = require('node-telegram-bot-api');
+const token = '';
+const bot = new TelegramBot(token, {polling: true});
+const chatId = '';
 
 router.all("/", jsonParser, function (req, res) {
 
@@ -61,6 +64,12 @@ router.all("/", jsonParser, function (req, res) {
         };
 
         let answer = JSON.stringify(data);
+
+        //const resp = match[1]; // the captured "whatever"
+
+        let ads = `В продажу поступил новый товар! В продаже ${mName} по отличной цене всего ${mPrice} рублей в количестве ${mCount} единиц. ${mDescription}`;
+        bot.sendMessage(chatId, ads);
+
         res.send(answer);
 
         // var answ = '';
