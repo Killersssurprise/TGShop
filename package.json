@@ -7,14 +7,19 @@
   },
   "dependencies": {
     "blueimp-file-upload": "^10.32.0",
+    "body-parser": "^1.20.1",
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "express-fileupload": "^1.4.0",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "lodash": "^4.17.21",
     "morgan": "~1.9.1",
     "node-telegram-bot-api": "^0.61.0",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "unique-filename": "^3.0.0",
+    "uuid": "^9.0.0"
   }
 }
