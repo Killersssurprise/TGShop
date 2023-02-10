@@ -67,7 +67,7 @@
     <h1>Форма добавления товара</h1>
 
     <div class="main-agileinfo">
-        <div class="container">
+        <div >
             <!-- The file upload form used as target for the file upload widget -->
             <form
                     id="fileupload"
@@ -87,42 +87,43 @@
                         <!-- The fileinput-button span is used to style the file input field as button -->
                         <span class="btn btn-success fileinput-button">
               <i class="glyphicon glyphicon-plus"></i>
-              <span>Add files...</span>
-              <input type="file" name="files[]" multiple/>
-            </span>
+              <span>Add files</span>
+                            <input type="file" name="files[]" multiple/>
+                        </span>
                         <button type="submit" class="btn btn-primary start">
                             <i class="glyphicon glyphicon-upload"></i>
                             <span>Start upload</span>
                         </button>
                         <button type="reset" class="btn btn-warning cancel">
                             <i class="glyphicon glyphicon-ban-circle"></i>
-                            <span>Cancel upload</span>
+                            <span>Cancel</span>
                         </button>
                         <button type="button" class="btn btn-danger delete">
                             <i class="glyphicon glyphicon-trash"></i>
-                            <span>Delete selected</span>
+                            <span>Delete</span>
                         </button>
-                        <input type="checkbox" class="toggle"/>
+<!--                        <input type="checkbox" class="toggle"/>-->
                         <!-- The global file processing state -->
                         <span class="fileupload-process"></span>
                     </div>
                     <!-- The global progress state -->
-                    <div class="col-lg-5 fileupload-progress fade">
-                        <!-- The global progress bar -->
-                        <div
-                                class="progress progress-striped active"
-                                role="progressbar"
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                        >
-                            <div
-                                    class="progress-bar progress-bar-success"
-                                    style="width: 0%;"
-                            ></div>
-                        </div>
-                        <!-- The extended global progress state -->
-                        <div class="progress-extended">&nbsp;</div>
-                    </div>
+<!--                    <div class="col-lg-5 fileupload-progress fade">-->
+<!--                        &lt;!&ndash; The global progress bar &ndash;&gt;-->
+<!--                        <div-->
+<!--                                class="progress progress-striped active"-->
+<!--                                role="progressbar"-->
+<!--                                aria-valuemin="0"-->
+<!--                                aria-valuemax="100">-->
+
+<!--                            <div-->
+<!--                                    class="progress-bar progress-bar-success"-->
+<!--                                    style="width: 0%;">-->
+
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash; The extended global progress state &ndash;&gt;-->
+<!--                        <div class="progress-extended">&nbsp;</div>-->
+<!--                    </div>-->
                 </div>
                 <!-- The table listing the files available for upload/download -->
                 <table role="presentation" class="table table-striped">
@@ -148,36 +149,44 @@
                         aria-label="image gallery"
                         aria-modal="true"
                         role="dialog"
-                        data-filter=":even"
-                >
+                        data-filter=":even">
+
                     <div class="slides" aria-live="polite"></div>
                     <h3 class="title"></h3>
                     <a
                             class="prev"
                             aria-controls="blueimp-gallery"
                             aria-label="previous slide"
-                            aria-keyshortcuts="ArrowLeft"
-                    ></a>
+                            aria-keyshortcuts="ArrowLeft">
+
+                    </a>
+
                     <a
                             class="next"
                             aria-controls="blueimp-gallery"
                             aria-label="next slide"
-                            aria-keyshortcuts="ArrowRight"
-                    ></a>
+                            aria-keyshortcuts="ArrowRight">
+
+                    </a>
+
                     <a
                             class="close"
                             aria-controls="blueimp-gallery"
                             aria-label="close"
-                            aria-keyshortcuts="Escape"
-                    ></a>
+                            aria-keyshortcuts="Escape">
+
+                    </a>
+
                     <a
                             class="play-pause"
                             aria-controls="blueimp-gallery"
                             aria-label="play slideshow"
                             aria-keyshortcuts="Space"
                             aria-pressed="false"
-                            role="button"
-                    ></a>
+                            role="button">
+
+                    </a>
+
                     <ol class="indicator"></ol>
                 </div>
                 <!-- The template to display files available for upload -->
@@ -219,8 +228,9 @@
       {% } %}
 
 
-
                 </script>
+
+
                 <!-- The template to display files available for download -->
                 <script id="template-download" type="text/x-tmpl">
       {% for (var i=0, file; file=o.files[i]; i++) { %}
@@ -266,6 +276,7 @@
 
 
 
+
                 </script>
                 <script
                         src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
@@ -273,7 +284,7 @@
                         crossorigin="anonymous">
                 </script>
 
-                <script src = "/javascripts/dataformagregator.js"></script>
+                <script src="/javascripts/dataformagregator.js"></script>
 
                 <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
                 <script src="/javascripts/vendor/jquery.ui.widget.js"></script>
@@ -319,14 +330,14 @@
                 </div>
                 <input type="submit" value="Добавить товар" onclick="checkValue()">
             </form>
-            <p>Don't have an Account? <a href="#"> Login Now!</a></p>
+            <!--            <p>Don't have an Account? <a href="#"> Login Now!</a></p>-->
         </div>
     </div>
     <!-- copyright -->
-    <div class="colorlibcopy-agile">
-        <p>© 2018 Colorlib Signup Form. All rights reserved | Design by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
-        </p>
-    </div>
+    <!--    <div class="colorlibcopy-agile">-->
+    <!--        <p>© 2018 Colorlib Signup Form. All rights reserved | Design by <a href="https://colorlib.com/" target="_blank">Colorlib</a>-->
+    <!--        </p>-->
+    <!--    </div>-->
     <!-- //copyright -->
     <ul class="colorlib-bubbles">
         <li></li>

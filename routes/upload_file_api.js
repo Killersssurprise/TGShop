@@ -26,6 +26,7 @@ router.post('/', async (req, res) => {
                 message: 'File is uploaded',
                 data: {
                     name: avatar.name,
+                    upload_name: randomTmpfile,
                     mimetype: avatar.mimetype,
                     size: avatar.size
                 }

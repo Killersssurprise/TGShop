@@ -31,6 +31,7 @@ router.post('/', async (req, res) => {
                 //push file details
                 data.push({
                     name: photo.name,
+                    upload_name: randomTmpfile,
                     mimetype: photo.mimetype,
                     size: photo.size
                 });
